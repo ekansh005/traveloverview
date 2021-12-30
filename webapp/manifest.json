@@ -62,6 +62,21 @@
         "sourceTemplate": {
             "id": "OVP.smartovptemplate",
             "version": "1.41.1"
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "com-ekansh-traveloverview-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "Travel",
+                    "action": "overview",
+                    "title": "{{flpTitle}}",
+                    "subTitle": "{{flpSubtitle}}",
+                    "icon": ""
+                }
+            }
         }
     },
     "sap.ui": {
@@ -164,7 +179,8 @@
                     "entitySet": "Travel",
                     "sortOrder": "ascending",
                     "sortBy": "BeginDate",
-                    "tabs": [{
+                    "tabs": [
+                        {
                             "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#OpenInProgressTravels",
                             "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#OpenInProgressSelection",
                             "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#TravelBeginDateOpenInProgress",
@@ -194,7 +210,8 @@
                 "settings": {
                     "title": "{{Card_QuickLinks_Title}}",
                     "listFlavor": "standard",
-                    "staticContent": [{
+                    "staticContent": [
+                        {
                             "title": "Create Travel",
                             "imageUri": "sap-icon://create",
                             "imageAltText": "{{card30_icon_so_man}}",
@@ -252,5 +269,9 @@
     },
     "sap.ui.generic.app": {
         "settings": {}
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "com-ekansh-traveloverview"
     }
 }
